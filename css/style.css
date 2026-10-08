@@ -2,10 +2,24 @@
     --cor-principal: #FFFFFF;
     --cor-base: #174B52;
     --fonte: "Inria Sans", sans-serif;
-}
+    --cor-current-page: #414C4C;
+    --navbar-text-color: #627777;
+    --navbar-text-size: 20px;
+} 
 
 /* 
   site para os pessos correspondentes que tao no figma https://fonts.google.com/selection/embed
+  pesos:
+    Peso	Nome
+    100	    Thin
+    200	    Extra Light
+    300	    Light
+    400	    Regular
+    500	    Medium
+    600	    Semibold
+    700	    Bold
+    800	    Extra Bold
+    900	    Black
 */
 
 * {
@@ -15,4 +29,65 @@
 
 body {
     background-color: var(--cor-principal);
+    font-family: var(--fonte);
+}
+
+header {
+    padding: 50px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin: 10px;
+}
+
+header a[aria-current='page'] {
+    font-weight: 600;
+    color: var(--cor-current-page);
+    border-bottom: 1px solid var(--cor-current-page);
+    padding: 5px 20px;
+}
+
+header a {
+    font-family: var(--cor-principal);
+    font-weight: 300;
+    color: var(--navbar-text-color);
+    font-size: var(--navbar-text-size);
+}
+
+header img {
+    height: 65px;
+    width: 65px;
+    margin-left: 90px;
+}
+
+header nav {
+    display: inline-block;
+    margin-left: 900px;
+}
+
+.titulo {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.titulo h2 {
+    font-weight: 700;
+    color: var(--cor-base);
+    font-size: 30px;
+}
+
+.titulo p {
+    color: var(--navbar-text-color);
+    font-weight: 300;
+    font-style: italic;
+    font-size: var(--navbar-text-size);
 }
