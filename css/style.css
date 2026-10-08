@@ -1,10 +1,12 @@
 :root {
     --cor-principal: #FFFFFF;
     --cor-base: #174B52;
+    --cor-index-page: #DCEEED;
     --fonte: "Inria Sans", sans-serif;
     --cor-current-page: #414C4C;
     --navbar-text-color: #627777;
     --tamanho-fonte-destque: 20px;
+    --topic-text-color: #236C73;
 } 
 
 /* 
@@ -105,6 +107,7 @@ footer {
     padding: 125px;
     color: var(--cor-principal);
     font-size: var(--tamanho-fonte-destque);
+    margin-top: 60px;
 }
 
 footer ul {
@@ -136,4 +139,110 @@ footer p {
     font-weight: 300;
     opacity: 80%;
     display: inline;
+}
+
+
+
+.index-page h3 {
+    max-width: 500px;
+    display: inline-block;
+    font-weight: 400;
+    color: var(--navbar-text-color);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.index-page {
+    background-color: var(--cor-index-page);
+    text-align: center;
+    padding: 70px;
+}
+
+.index-page a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--cor-base);
+    color: var(--cor-principal);
+    border-radius: 5px;
+    text-decoration: none;
+    width: 25%;
+    transition: 0.5s;
+    border: 1px solid var(--cor-base);
+}
+
+.index-page a:hover{
+    background-color: var(--cor-index-page);
+    border: 1px solid var(--cor-base);
+    color: var(--cor-base);
+    transform: scale(0.95);
+}
+
+.index-page p {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--topic-text-color);
+}
+
+.index-page h1 {
+    font-family: "Nova Mono", monospace;
+    font-size: 70px;
+    color: #174B52;
+    letter-spacing: 1px;
+}
+
+.index-page h2 {
+    display: inline-block;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    color: var(--topic-text-color);
+    font-size: 30px;
+    max-width: 500px;
+    margin: 15px;
+}
+
+.oque-fazemos {
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.oque-fazemos p {
+    letter-spacing: 3px;
+    color: var(--topic-text-color);
+    font-weight: 700;
+}
+
+.oque-fazemos h2 {
+    margin-top: 10px;
+    color: var(--cor-base);
+    letter-spacing: 1.5px;
+}
+
+.oque-fazemos article {
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid var(--cor-index-page);
+    display: inline-block;
+    max-width: 400px;
+    margin-left: 90px;
+    height: 170px;
+    vertical-align: top;
+}
+
+.oque-fazemos article h2 {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.oque-fazemos article p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.oque-fazemos h3 {
+    color: var(--topic-text-color);
+    font-weight: 700;
 }
