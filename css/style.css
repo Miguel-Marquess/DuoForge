@@ -208,7 +208,7 @@ footer p {
 
 .oque-fazemos p {
     letter-spacing: 3px;
-    color: var(--topic-text-color);
+    color: var(--navbar-text-color);
     font-weight: 700;
 }
 
