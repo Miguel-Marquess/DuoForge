@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="800" height="800">
+  <rect width="400" height="400" fill="#7ec8e3"/>
+  <!-- camiseta -->
+  <path d="M40 400 Q60 320 200 120 Q340 320 360 400 Z" fill="#2e9e5b" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <!-- pescoço -->
+  <rect x="165" y="300" width="70" height="60" fill="#b5733a" stroke="#111" stroke-width="6"/>
+  <!-- orelhas -->
+  <circle cx="78" cy="225" r="28" fill="#c68642" stroke="#111" stroke-width="6"/>
+  <circle cx="322" cy="225" r="28" fill="#c68642" stroke="#111" stroke-width="6"/>
+  <!-- rosto -->
+  <ellipse cx="200" cy="215" rx="125" ry="135" fill="#c68642" stroke="#111" stroke-width="7"/>
+  <!-- cabelo bagunçado -->
+  <g fill="#1b1209" stroke="#111" stroke-width="5">
+    <circle cx="105" cy="120" r="38"/>
+    <circle cx="150" cy="85" r="42"/>
+    <circle cx="205" cy="72" r="44"/>
+    <circle cx="258" cy="88" r="40"/>
+    <circle cx="300" cy="125" r="36"/>
+    <circle cx="82" cy="165" r="22"/>
+    <circle cx="322" cy="168" r="22"/>
+  </g>
+  <path d="M95 150 Q200 110 305 150 Q300 120 200 105 Q100 120 95 150Z" fill="#c68642"/>
+  <!-- sobrancelhas grossas -->
+  <rect x="115" y="158" width="80" height="22" rx="10" fill="#1b1209" transform="rotate(-8 155 169)"/>
+  <rect x="215" y="152" width="80" height="22" rx="10" fill="#1b1209" transform="rotate(12 255 163)"/>
+  <!-- óculos -->
+  <circle cx="155" cy="215" r="42" fill="#fff" fill-opacity="0.45" stroke="#222" stroke-width="7"/>
+  <circle cx="255" cy="215" r="42" fill="#fff" fill-opacity="0.45" stroke="#222" stroke-width="7"/>
+  <path d="M197 212 Q205 202 213 212" fill="none" stroke="#222" stroke-width="7"/>
+  <!-- olhos desiguais -->
+  <ellipse cx="155" cy="215" rx="17" ry="20" fill="#fff" stroke="#111" stroke-width="3"/>
+  <ellipse cx="257" cy="217" rx="13" ry="15" fill="#fff" stroke="#111" stroke-width="3"/>
+  <circle cx="160" cy="218" r="8" fill="#111"/>
+  <circle cx="253" cy="219" r="6" fill="#111"/>
+  <!-- nariz grandão -->
+  <ellipse cx="205" cy="265" rx="26" ry="22" fill="#b5733a" stroke="#111" stroke-width="5"/>
+  <circle cx="195" cy="270" r="5" fill="#5a3410"/>
+  <circle cx="216" cy="270" r="5" fill="#5a3410"/>
+  <!-- barba por fazer -->
+  <g fill="#3a2410">
+    <circle cx="130" cy="300" r="3"/><circle cx="148" cy="315" r="3"/><circle cx="170" cy="325" r="3"/>
+    <circle cx="230" cy="325" r="3"/><circle cx="252" cy="315" r="3"/><circle cx="270" cy="300" r="3"/>
+    <circle cx="120" cy="280" r="3"/><circle cx="280" cy="280" r="3"/><circle cx="200" cy="335" r="3"/>
+  </g>
+  <!-- sorriso com dente faltando -->
+  <path d="M135 298 Q205 365 275 295 Q205 320 135 298Z" fill="#fff" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="195" y="313" width="16" height="14" fill="#6b1d1d"/>
+  <path d="M135 298 Q205 365 275 295" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+</svg>

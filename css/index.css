@@ -37,6 +37,7 @@ body {
 
 header {
     padding: 50px;
+    border-bottom: 1px solid var(--cor-base);
 }
 
 header a {
@@ -187,7 +188,7 @@ footer p {
 .index-page h1 {
     font-family: "Nova Mono", monospace;
     font-size: 70px;
-    color: #174B52;
+    color: var(--cor-base);
     letter-spacing: 1px;
 }
 
@@ -208,7 +209,7 @@ footer p {
 
 .oque-fazemos p {
     letter-spacing: 3px;
-    color: var(--navbar-text-color);
+    color: var(--topic-text-color);
     font-weight: 700;
 }
 
