@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="800" height="800">
+  <rect width="400" height="400" fill="#f5b971"/>
+  <!-- moletom -->
+  <path d="M30 400 Q50 320 200 130 Q350 320 370 400 Z" fill="#6a4fb3" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M170 300 L170 400 M230 300 L230 400" stroke="#eee" stroke-width="5"/>
+  <!-- pescoço comprido -->
+  <rect x="170" y="290" width="60" height="70" fill="#e8b98a" stroke="#111" stroke-width="6"/>
+  <!-- orelhas de abano -->
+  <ellipse cx="88" cy="195" rx="22" ry="38" fill="#f1c9a0" stroke="#111" stroke-width="6" transform="rotate(-12 88 195)"/>
+  <ellipse cx="312" cy="195" rx="22" ry="38" fill="#f1c9a0" stroke="#111" stroke-width="6" transform="rotate(12 312 195)"/>
+  <!-- rosto comprido com queixão -->
+  <path d="M100 120 Q100 70 200 70 Q300 70 300 120 L295 220 Q290 300 250 335 Q200 372 150 335 Q110 300 105 220 Z" fill="#f1c9a0" stroke="#111" stroke-width="7" stroke-linejoin="round"/>
+  <!-- boné virado pra trás -->
+  <path d="M100 135 Q105 55 200 52 Q295 55 300 135 Q200 100 100 135Z" fill="#d6372f" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M300 125 Q350 120 365 140 Q330 150 298 142Z" fill="#a82822" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="200" cy="52" r="8" fill="#a82822" stroke="#111" stroke-width="4"/>
+  <!-- franja -->
+  <path d="M112 140 Q130 175 150 140 Q170 170 190 140" fill="#4a2a12" stroke="#111" stroke-width="4"/>
+  <!-- sobrancelha reta e outra levantada -->
+  <rect x="120" y="170" width="65" height="12" rx="6" fill="#4a2a12" transform="rotate(4 152 176)"/>
+  <path d="M215 170 Q245 138 285 160" fill="none" stroke="#4a2a12" stroke-width="13" stroke-linecap="round"/>
+  <!-- olhos sonolentos -->
+  <ellipse cx="153" cy="205" rx="26" ry="20" fill="#fff" stroke="#111" stroke-width="4"/>
+  <ellipse cx="250" cy="203" rx="26" ry="22" fill="#fff" stroke="#111" stroke-width="4"/>
+  <circle cx="162" cy="207" r="9" fill="#111"/>
+  <circle cx="259" cy="205" r="9" fill="#111"/>
+  <path d="M125 197 Q153 180 181 197" fill="#f1c9a0" stroke="#111" stroke-width="4"/>
+  <!-- nariz pontudo -->
+  <path d="M200 205 L178 270 Q200 285 222 270 Z" fill="#e8b98a" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+  <!-- bigode fininho -->
+  <path d="M150 295 Q175 280 200 292 Q225 280 250 295 Q225 300 200 298 Q175 300 150 295Z" fill="#4a2a12" stroke="#111" stroke-width="3"/>
+  <!-- sorriso de canto -->
+  <path d="M165 322 Q215 335 262 300" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M258 304 L270 312" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+</svg>
