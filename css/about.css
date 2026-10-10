@@ -291,9 +291,11 @@ footer p {
 }
 
 .about-page a:hover{
-    background-color: var(--cor-index-page);
+    background-color: var(--cor-principal);
     border: 1px solid var(--cor-base);
     color: var(--cor-base);
     transform: scale(0.95);
 }
+
+
 
