@@ -67,6 +67,7 @@ body {
  
 /* O atributo aria-current="page" marca a página onde estamos.
    Deixamos esse link em negrito e com uma linha embaixo. */
+   
 .header nav a[aria-current="page"] {
     font-weight: bold;
     color: var(--verde-escuro);

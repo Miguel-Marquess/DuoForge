@@ -1,15 +1,253 @@
-:root {
-    --cor-principal: #FFFFFF;
-    --cor-base: #174B52;
-    --cor-index-page: #DCEEED;
-    --fonte: "Inria Sans", sans-serif;
-    --cor-current-page: #414C4C;
-    --navbar-text-color: #627777;
-    --tamanho-fonte-destque: 20px;
-    --topic-text-color: #236C73;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    padding: 50px;
-    border-bottom: 1px solid var(--cor-base);
+:root {
+    --verde-escuro: #174d54;   /* rodapé e títulos */
+    --verde: #236b73;          /* botões e detalhes */
+    --verde-claro: #ddeceb;    /* caixinhas de destaque */
+    --fundo: #f7f9f8;          /* fundo da página */
+    --texto: #5a6b6e;          /* texto cinza */
+    --borda: #cfd9d8;          /* linhas e bordas */
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 15%;   /* 12px em cima/baixo e 15% nas laterais */
+}
+
+.header img {
+    width: 38px;
+    height: 38px;
+}
+
+.titulo {
+    margin-left: 10px;
+}
+ 
+.titulo h2 {
+    font-size: 16px;
+    color: var(--verde-escuro);
+}
+ 
+.titulo p {
+    font-size: 10px;
+}
+ 
+/* margin-left auto empurra o menu todo para a direita */
+.header nav {
+    margin-left: auto;
+}
+ 
+/* lista do menu tira as bolinhas list-style e deixa os itens
+   um do lado do outro flex. O gap é o espaço entre eles. */
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+ 
+.header nav a {
+    text-decoration: none;   /* tira o sublinhado padrão */
+    font-size: 12px;
+    color: var(--texto);
+    padding-bottom: 6px;
+}
+
+.header nav a:hover {
+    color: var(--verde-escuro);
+}
+ 
+/* O atributo aria-current="page" marca a página onde estamos.
+   Deixamos esse link em negrito e com uma linha embaixo. */
+
+.header nav a[aria-current="page"] {
+    font-weight: bold;
+    color: var(--verde-escuro);
+    border-bottom: 2px solid var(--verde);
+}
+ 
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* um em cada ponta */
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 36px 15%;
+    margin-top: 60px;   /* espaço entre o conteúdo e o rodapé */
+}
+ 
+footer h3 {
+    font-size: 14px;
+}
+ 
+footer p {
+    font-size: 11px;
+}
+ 
+/* Links do rodapé lado a lado */
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+ 
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+ 
+footer a:hover {
+    text-decoration: underline;   /* sublinha ao passar o mouse */
+}
+ 
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 50px 20px 0 20px;
+}
+ 
+/* Cabeçalho da página */
+.topo h4 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--verde);
+}
+ 
+.topo h1 {
+    font-size: 36px;
+    font-weight: normal;
+    color: var(--verde-escuro);
+}
+ 
+.topo p {
+    font-size: 14px;
+    margin-top: 8px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--borda);
+    margin-bottom: 30px;
+}
+ 
+/* coloca o formulário esquerda e o cartão direita
+   lado a lado. */
+
+.conteudo {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+ 
+/* flex 1 = o formulário ocupa o espaço que sobrar */
+form {
+    flex: 1;
+}
+ 
+/* Os nomes dos campos (Nome, E-mail...).
+   display: block faz cada label ocupar uma linha inteira. */
+label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 6px;
+}
+ 
+/* Estilo igual para todos os campos de escrever */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;       /* usa a mesma fonte do site */
+    font-size: 12px;
+    border: 1px solid var(--borda);
+    background-color: white;
+    margin-bottom: 18px;
+}
+ 
+/* A caixa de mensagem é mais alta e só pode ser esticada para baixo */
+
+textarea {
+    height: 95px;
+    resize: vertical;
+}
+
+/* Botão de enviar */
+button {
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+}
+ 
+button:hover {
+    background-color: var(--verde-escuro);
+}
+
+.cartao {
+    width: 280px;
+    background-color: var(--verde-claro);
+    border: 1px solid var(--borda);
+    padding: 24px;
+}
+ 
+.cartao img {
+    width: 40px;
+    height: 40px;
+}
+ 
+.cartao h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--verde-escuro);
+    margin-top: 12px;
+}
+ 
+/* Texto de descrição e linha embaixo */
+.cartao > p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 6px 0 18px 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--borda);
+}
+ 
+/* Os pequenos títulos email, github e linkedin */
+
+.cartao small {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;  /* deixa tudo em MAIÚSCULAS */
+}
+ 
+/* Os dados de contato */
+.cartao a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+ 
+.cartao a:hover {
+    text-decoration: underline;
 }
