@@ -1,118 +1,138 @@
+:root {
+    --cor-principal: #FFFFFF;
+    --cor-base: #174B52;
+    --cor-index-page: #DCEEED;
+    --fonte: "Inria Sans", sans-serif;
+    --cor-current-page: #414C4C;
+    --navbar-text-color: #627777;
+    --tamanho-fonte-destque: 20px;
+    --topic-text-color: #236C73;
+}
+/* 
+  pesos:
+    Peso	Nome
+    100	    Thin
+    200	    Extra Light
+    300	    Light
+    400	    Regular
+    500	    Medium
+    600	    Semibold
+    700	    Bold
+    800	    Extra Bold
+    900	    Black
+*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-:root {
-    --verde-escuro: #174d54;   /* rodapé e títulos */
-    --verde: #236b73;          /* botões e detalhes */
-    --verde-claro: #ddeceb;    /* caixinhas de destaque */
-    --fundo: #f7f9f8;          /* fundo da página */
-    --texto: #5a6b6e;          /* texto cinza */
-    --borda: #cfd9d8;          /* linhas e bordas */
-}
-
+ 
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    background-color: var(--fundo);
-    color: var(--texto);
+    background-color: var(--cor-principal);
+    font-family: var(--fonte);
+    overflow-x: hidden; /* deixa de mostrar elementos que estao passando do limite de px do pai */
 }
-
-.header {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-bottom: 1px solid var(--borda);
-    padding: 12px 15%;   /* 12px em cima/baixo e 15% nas laterais */
+ 
+ 
+header {
+    padding: 50px;
+    border-bottom: 1px solid var(--cor-base);
 }
-
-.header img {
-    width: 38px;
-    height: 38px;
+ 
+header a {
+    text-decoration: none;
 }
-
+ 
+header ul {
+    list-style: none;
+}
+ 
+header ul li {
+    display: inline;
+    margin: 10px;
+}
+ 
+header a[aria-current='page'] {
+    font-weight: 600;
+    color: var(--cor-current-page);
+    border-bottom: 1px solid var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header a {
+    font-family: var(--cor-principal);
+    font-weight: 300;
+    color: var(--navbar-text-color);
+    font-size: var(--tamanho-fonte-destque);
+    transition: 0.8s;
+}
+ 
+header a:hover {
+    border-bottom: 1px dashed var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header img {
+    height: 65px;
+    width: 65px;
+    margin-left: 90px;
+}
+ 
+header nav {
+    display: inline-block;
+    margin-left: 1000px;
+}
+ 
 .titulo {
-    margin-left: 10px;
+    display: inline-block;
+    margin: 0px 20px;
 }
  
 .titulo h2 {
-    font-size: 16px;
-    color: var(--verde-escuro);
+    font-weight: 700;
+    color: var(--cor-base);
+    font-size: 30px;
 }
  
 .titulo p {
-    font-size: 10px;
+    color: var(--navbar-text-color);
+    font-weight: 300;
+    font-style: italic;
+    font-size: var(--tamanho-fonte-destque);
 }
  
-/* margin-left auto empurra o menu todo para a direita */
-.header nav {
-    margin-left: auto;
-}
- 
-/* lista do menu tira as bolinhas list-style e deixa os itens
-   um do lado do outro flex. O gap é o espaço entre eles. */
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
- 
-.header nav a {
-    text-decoration: none;   /* tira o sublinhado padrão */
-    font-size: 12px;
-    color: var(--texto);
-    padding-bottom: 6px;
-}
-
-.header nav a:hover {
-    color: var(--verde-escuro);
-}
- 
-/* O atributo aria-current="page" marca a página onde estamos.
-   Deixamos esse link em negrito e com uma linha embaixo. */
-
-.header nav a[aria-current="page"] {
-    font-weight: bold;
-    color: var(--verde-escuro);
-    border-bottom: 2px solid var(--verde);
-}
- 
-
 footer {
-    background-color: var(--verde-escuro);
+    background-color: var(--cor-base);
     width: 100%;
     padding: 125px;
-    color: var(--fundo);
+    color: var(--cor-principal);
     font-size: var(--tamanho-fonte-destque);
     margin-top: 60px;
 }
-
+ 
 footer ul {
     list-style: none;
     display: inline-block;
     margin-left: 800px;
 }
-
+ 
 footer ul li {
     display: inline-block;
     margin: 20px;
 }
-
+ 
 footer ul li a {
     text-decoration: none;
-    color: var(--verde-claro);
+    color: var(--cor-principal);
     font-weight: 700;
     transition: 0.8s;
 }
-
+ 
 footer ul li a:hover {
-    border-bottom: 1px solid var(--verde-claro);
+    border-bottom: 1px solid var(--cor-principal);
     padding: 5px 20px;
 }
-
-
+ 
+ 
 footer p {
     font-style: italic;
     font-weight: 300;
@@ -120,138 +140,151 @@ footer p {
     display: inline;
 }
  
-main {
-    max-width: 720px;
+/* caixa do conteudo, centralizada */
+.contato-page {
+    width: 860px;
     margin: 0 auto;
-    padding: 50px 20px 0 20px;
+    padding-top: 60px;
 }
  
-/* Cabeçalho da página */
-.topo h4 {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--verde);
+.contato-page .topo h4 {
+    letter-spacing: 3px;
+    color: var(--topic-text-color);
+    font-weight: 700;
+    margin-bottom: 15px;
 }
  
-.topo h1 {
-    font-size: 36px;
-    font-weight: normal;
-    color: var(--verde-escuro);
+.contato-page .topo h1 {
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--cor-base);
+    letter-spacing: 1px;
+    margin-bottom: 3px;
 }
  
-.topo p {
-    font-size: 14px;
-    margin-top: 8px;
+.contato-page .topo p {
+    font-weight: 400;
+    color: var(--navbar-text-color);
+    letter-spacing: 1px;
+    margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 1px solid var(--borda);
-    margin-bottom: 30px;
+    border-bottom: 1px solid var(--cor-index-page);
 }
  
-/* coloca o formulário esquerda e o cartão direita
-   lado a lado. */
-
-.conteudo {
+/* formulario na esquerda e cartao na direita */
+.contato-page .conteudo {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     align-items: flex-start;
 }
  
-/* flex 1 = o formulário ocupa o espaço que sobrar */
-form {
+/* o formulario pega o espaco que sobrar */
+.contato-page form {
     flex: 1;
 }
  
-/* Os nomes dos campos (Nome, E-mail...).
-   display: block faz cada label ocupar uma linha inteira. */
-label {
+/* nome de cada campo, o block faz ficar sozinho na linha */
+.contato-page label {
     display: block;
-    font-size: 11px;
-    font-weight: bold;
-    color: #222;
+    font-weight: 700;
+    color: var(--cor-current-page);
     margin-bottom: 6px;
 }
  
-/* Estilo igual para todos os campos de escrever */
-input,
-select,
-textarea {
+/* estilo dos campos. o border-box faz o padding entrar dentro dos 100% se tirar o campo passa da caixa */
+.contato-page input,
+.contato-page select,
+.contato-page textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
-    font-family: inherit;       /* usa a mesma fonte do site */
-    font-size: 12px;
-    border: 1px solid var(--borda);
-    background-color: white;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    color: var(--cor-current-page);
+    border: 1px solid var(--cor-index-page);
+    background-color: var(--cor-principal);
 }
  
-/* A caixa de mensagem é mais alta e só pode ser esticada para baixo */
-
-textarea {
-    height: 95px;
+/* caixa de mensagem maior, so estica pra baixo */
+.contato-page textarea {
+    height: 120px;
     resize: vertical;
 }
-
-/* Botão de enviar */
-button {
-    background-color: var(--verde);
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
+ 
+/* quando clica no campo */
+.contato-page input:focus,
+.contato-page select:focus,
+.contato-page textarea:focus {
+    outline: none;
+    border: 1px solid var(--cor-base);
 }
  
-button:hover {
-    background-color: var(--verde-escuro);
-}
-
-.cartao {
-    width: 280px;
-    background-color: var(--verde-claro);
-    border: 1px solid var(--borda);
-    padding: 24px;
-}
- 
-.cartao img {
-    width: 40px;
-    height: 40px;
+/* botao enviar, igual aos botoes da pagina sobre */
+.contato-page button {
+    padding: 10px 20px;
+    background-color: var(--cor-base);
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-base);
+    border-radius: 5px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
 }
  
-.cartao h2 {
-    font-size: 20px;
-    font-weight: normal;
-    color: var(--verde-escuro);
-    margin-top: 12px;
+/* inverte as cores quando passa o mouse */
+.contato-page button:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-base);
+    transform: scale(0.95);
 }
  
-/* Texto de descrição e linha embaixo */
-.cartao > p {
-    font-size: 12px;
-    line-height: 1.6;
-    margin: 6px 0 18px 0;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--borda);
+/* cartao do lado */
+.contato-page .cartao {
+    width: 300px;
+    padding: 25px;
+    background-color: var(--cor-index-page);
+    border: 1px solid var(--cor-index-page);
+    border-radius: 8px;
 }
  
-/* Os pequenos títulos email, github e linkedin */
-
-.cartao small {
+.contato-page .cartao img {
+    width: 50px;
+    height: 50px;
+}
+ 
+.contato-page .cartao h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--cor-base);
+    margin-top: 10px;
+}
+ 
+/* texto de descricao com linha embaixo */
+.contato-page .cartao > p {
+    color: var(--navbar-text-color);
+    margin: 5px 0 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cor-principal);
+}
+ 
+/* E-MAIL, GITHUB, LINKEDIN (o uppercase deixa tudo maiusculo) */
+.contato-page .cartao small {
     display: block;
-    font-size: 9px;
-    text-transform: uppercase;  /* deixa tudo em MAIÚSCULAS */
+    color: var(--topic-text-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
  
-/* Os dados de contato */
-.cartao a {
+.contato-page .cartao a {
     display: block;
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--verde-escuro);
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: var(--cor-base);
     text-decoration: none;
-    margin-bottom: 8px;
 }
  
-.cartao a:hover {
+.contato-page .cartao a:hover {
     text-decoration: underline;
 }

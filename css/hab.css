@@ -1,127 +1,139 @@
-   /*
-   O navegador coloca margens e espaços automáticos nos elementos.
-   controlar o espaçamento sozinho.
-   O box-sizing: border-box faz o padding e a borda ficarem
-   DENTRO da largura do elemento (facilita as contas). */
+:root {
+    --cor-principal: #FFFFFF;
+    --cor-base: #174B52;
+    --cor-index-page: #DCEEED;
+    --fonte: "Inria Sans", sans-serif;
+    --cor-current-page: #414C4C;
+    --navbar-text-color: #627777;
+    --tamanho-fonte-destque: 20px;
+    --topic-text-color: #236C73;
+}
+/* 
+  pesos:
+    Peso	Nome
+    100	    Thin
+    200	    Extra Light
+    300	    Light
+    400	    Regular
+    500	    Medium
+    600	    Semibold
+    700	    Bold
+    800	    Extra Bold
+    900	    Black
+*/
+ 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --verde-escuro: #174d54;   /* rodapé e títulos */
-    --verde: #236b73;          /* botões e detalhes */
-    --verde-claro: #ddeceb;    /* caixinhas de destaque */
-    --fundo: #f7f9f8;          /* fundo da página */
-    --texto: #5a6b6e;          /* texto cinza */
-    --borda: #cfd9d8;          /* linhas e bordas */
 }
  
-/* Define a fonte e a cor de fundo e a cor do texto padrão */
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    background-color: var(--fundo);
-    color: var(--texto);
+    background-color: var(--cor-principal);
+    font-family: var(--fonte);
+    overflow-x: hidden; /* deixa de mostrar elementos que estao passando do limite de px do pai */
 }
  
-
-/* O header fica com fundo branco e uma linha embaixo.
-   display: flex coloca os filhos (logo, título e menu) LADO A LADO.
-   align-items: center alinha tudo no meio na vertical. */
-.header {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-bottom: 1px solid var(--borda);
-    padding: 12px 15%;   /* 12px em cima/baixo e 15% nas laterais */
+ 
+header {
+    padding: 50px;
+    border-bottom: 1px solid var(--cor-base);
 }
  
-/* Tamanho do logo */
-.header img {
-    width: 38px;
-    height: 38px;
+header a {
+    text-decoration: none;
 }
  
-/* Bloco com o nome "DuoForge" e o slogan */
+header ul {
+    list-style: none;
+}
+ 
+header ul li {
+    display: inline;
+    margin: 10px;
+}
+ 
+header a[aria-current='page'] {
+    font-weight: 600;
+    color: var(--cor-current-page);
+    border-bottom: 1px solid var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header a {
+    font-family: var(--cor-principal);
+    font-weight: 300;
+    color: var(--navbar-text-color);
+    font-size: var(--tamanho-fonte-destque);
+    transition: 0.8s;
+}
+ 
+header a:hover {
+    border-bottom: 1px dashed var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header img {
+    height: 65px;
+    width: 65px;
+    margin-left: 90px;
+}
+ 
+header nav {
+    display: inline-block;
+    margin-left: 1000px;
+}
+ 
 .titulo {
-    margin-left: 10px;
+    display: inline-block;
+    margin: 0px 20px;
 }
  
 .titulo h2 {
-    font-size: 16px;
-    color: var(--verde-escuro);
+    font-weight: 700;
+    color: var(--cor-base);
+    font-size: 30px;
 }
  
 .titulo p {
-    font-size: 10px;
+    color: var(--navbar-text-color);
+    font-weight: 300;
+    font-style: italic;
+    font-size: var(--tamanho-fonte-destque);
 }
  
-/* margin-left: auto empurra o menu todo para a DIREITA */
-.header nav {
-    margin-left: auto;
-}
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
- 
-/* Estilo dos links do menu */
-.header nav a {
-    text-decoration: none;   /* tira o sublinhado padrão */
-    font-size: 12px;
-    color: var(--texto);
-    padding-bottom: 6px;
-}
- 
-.header nav a:hover {
-    color: var(--verde-escuro);
-}
- 
-/* aria-current="page" marca a página onde estamos.
-   Deixamos esse link em negrito e com uma linha embaixo. */
-
-.header nav a[aria-current="page"] {
-    font-weight: bold;
-    color: var(--verde-escuro);
-    border-bottom: 2px solid var(--verde);
-}
-
 footer {
-    background-color: var(--verde-escuro);
+    background-color: var(--cor-base);
     width: 100%;
     padding: 125px;
-    color: var(--fundo);
+    color: var(--cor-principal);
     font-size: var(--tamanho-fonte-destque);
     margin-top: 60px;
 }
-
+ 
 footer ul {
     list-style: none;
     display: inline-block;
     margin-left: 800px;
 }
-
+ 
 footer ul li {
     display: inline-block;
     margin: 20px;
 }
-
+ 
 footer ul li a {
     text-decoration: none;
-    color: var(--verde-claro);
+    color: var(--cor-principal);
     font-weight: 700;
     transition: 0.8s;
 }
-
+ 
 footer ul li a:hover {
-    border-bottom: 1px solid var(--verde-claro);
+    border-bottom: 1px solid var(--cor-principal);
     padding: 5px 20px;
 }
-
-
+ 
+ 
 footer p {
     font-style: italic;
     font-weight: 300;
@@ -129,90 +141,90 @@ footer p {
     display: inline;
 }
 
-/* O main guarda o conteúdo. max-width limita a largura e
-   "margin: 0 auto" centraliza ele na tela. */
-main {
-    max-width: 864px;
+ 
+/* caixa do conteudo, o margin auto deixa ela no meio da tela */
+.habilidades-page {
+    width: 900px;
     margin: 0 auto;
-    padding: 60px 20px 0 20px;
+    padding-top: 60px;
 }
  
-/* cabeçalho da página o textinho pequeno em cima, o título e a descrição */
-.topo h4 {
-    font-size: 10px;
-    letter-spacing: 2px;        /* espaço entre as letras */
-    color: var(--verde);
+/* texto pequeno de cima do titulo */
+.habilidades-page .topo h4 {
+    letter-spacing: 3px;
+    color: var(--topic-text-color);
+    font-weight: 700;
+    margin-bottom: 15px;
 }
  
-.topo h1 {
-    font-size: 40px;
-    font-weight: normal;
-    color: var(--verde-escuro);
+.habilidades-page .topo h1 {
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--cor-base);
+    letter-spacing: 1px;
+    margin-bottom: 3px;
 }
  
-.topo p {
-    max-width: 500px;           /* texto não fica largo demais */
-    font-size: 14px;
-    line-height: 1.7;           /* altura da linha (espaço entre linhas) */
-    margin-top: 10px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid var(--borda);   /* linha embaixo do texto */
+/* descricao com uma linha embaixo */
+.habilidades-page .topo p {
+    width: 500px;
+    font-weight: 400;
+    color: var(--navbar-text-color);
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cor-index-page);
 }
  
-/* Cada linha de habilidade (Desenvolvimento, Backend, Ferramentas).
-   Flex: número | título | tags, tudo na horizontal. */
-.categoria {
+/* cada linha da lista, o flex deixa numero, titulo e tags lado a lado */
+.habilidades-page .categoria {
     display: flex;
     align-items: flex-start;
-    border-top: 1px solid var(--borda);
     padding: 25px 15px;
+    border-top: 1px solid var(--cor-index-page);
 }
  
-/* A última categoria ganha uma linha embaixo também */
-.categoria:last-of-type {
-    border-bottom: 1px solid var(--borda);
+/* so a ultima linha tem borda embaixo */
+.habilidades-page .categoria:last-of-type {
+    border-bottom: 1px solid var(--cor-index-page);
 }
  
-/* Número 01, 02, 03 */
-.numero {
-    width: 60px;                /* largura fixa para alinhar as colunas */
-    font-size: 10px;
-    font-weight: bold;
+/* numero 01, 02, 03 (o span do html) */
+.habilidades-page .numero {
+    width: 60px;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: var(--verde);
-    padding-top: 6px;
+    color: var(--topic-text-color);
 }
  
-
-.categoria-titulo {
+/* titulo e subtitulo de cada categoria */
+.habilidades-page .categoria-titulo {
     width: 290px;
 }
  
-.categoria-titulo h2 {
-    font-size: 20px;
-    font-weight: normal;
-    color: var(--verde-escuro);
+.habilidades-page .categoria-titulo h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--cor-base);
 }
  
-.categoria-titulo p {
-    font-size: 13px;
+.habilidades-page .categoria-titulo p {
+    color: var(--navbar-text-color);
+    font-weight: 300;
     margin-top: 4px;
 }
  
-/* flex-wrap deixa quebrar de linha
-   se não couber tudo na mesma linha. */
-.tags {
+/* lista das tecnologias, tira as bolinhas e o wrap pula de linha quando nao cabe */
+.habilidades-page .tags {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
  
-/* Cada tag é uma caixinha com borda */
-.tags li {
-    background-color: white;
-    border: 1px solid var(--borda);
-    padding: 8px 10px;
-    font-size: 13px;
-    color: var(--verde-escuro);
+/* cada tecnologia numa caixinha */
+.habilidades-page .tags li {
+    padding: 5px 10px;
+    border: 1px solid var(--cor-index-page);
+    color: var(--cor-current-page);
 }

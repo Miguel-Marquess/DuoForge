@@ -1,198 +1,224 @@
 :root {
-    --verde-escuro: #174d54;   /* rodapé e títulos */
-    --verde: #236b73;          /* botões e detalhes */
-    --verde-claro: #ddeceb;    /* caixinhas de destaque */
-    --fundo: #f7f9f8;          /* fundo da página */
-    --texto: #5a6b6e;          /* texto cinza */
-    --borda: #cfd9d8;          /* linhas e bordas */
+    --cor-principal: #FFFFFF;
+    --cor-base: #174B52;
+    --cor-index-page: #DCEEED;
+    --fonte: "Inria Sans", sans-serif;
+    --cor-current-page: #414C4C;
+    --navbar-text-color: #627777;
+    --tamanho-fonte-destque: 20px;
+    --topic-text-color: #236C73;
 }
-
+/* 
+  pesos:
+    Peso	Nome
+    100	    Thin
+    200	    Extra Light
+    300	    Light
+    400	    Regular
+    500	    Medium
+    600	    Semibold
+    700	    Bold
+    800	    Extra Bold
+    900	    Black
+*/
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    background-color: var(--fundo);
-    color: var(--texto);
+    background-color: var(--cor-principal);
+    font-family: var(--fonte);
+    overflow-x: hidden; /* deixa de mostrar elementos que estao passando do limite de px do pai */
 }
-
-.header {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-bottom: 1px solid var(--borda);
-    padding: 12px 15%;   /* 12px em cima/baixo e 15% nas laterais */
+ 
+ 
+header {
+    padding: 50px;
+    border-bottom: 1px solid var(--cor-base);
 }
-
-.header img {
-    width: 38px;
-    height: 38px;
+ 
+header a {
+    text-decoration: none;
+}
+ 
+header ul {
+    list-style: none;
+}
+ 
+header ul li {
+    display: inline;
+    margin: 10px;
+}
+ 
+header a[aria-current='page'] {
+    font-weight: 600;
+    color: var(--cor-current-page);
+    border-bottom: 1px solid var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header a {
+    font-family: var(--cor-principal);
+    font-weight: 300;
+    color: var(--navbar-text-color);
+    font-size: var(--tamanho-fonte-destque);
+    transition: 0.8s;
+}
+ 
+header a:hover {
+    border-bottom: 1px dashed var(--cor-current-page);
+    padding: 5px 20px;
+}
+ 
+header img {
+    height: 65px;
+    width: 65px;
+    margin-left: 90px;
+}
+ 
+header nav {
+    display: inline-block;
+    margin-left: 1000px;
 }
  
 .titulo {
-    margin-left: 10px;
+    display: inline-block;
+    margin: 0px 20px;
 }
  
 .titulo h2 {
-    font-size: 16px;
-    color: var(--verde-escuro);
+    font-weight: 700;
+    color: var(--cor-base);
+    font-size: 30px;
 }
  
 .titulo p {
-    font-size: 10px;
+    color: var(--navbar-text-color);
+    font-weight: 300;
+    font-style: italic;
+    font-size: var(--tamanho-fonte-destque);
 }
  
-/* margin-left: auto empurra o menu todo para a DIREITA */
-.header nav {
-    margin-left: auto;
-}
- 
-/* Lista do menu: tira as bolinhas list-style e deixa os itens
-   um do lado do outro flex. O gap é o espaço entre eles. */
-.header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
- 
-/* Estilo dos links do menu */
-.header nav a {
-    text-decoration: none;   /* tira o sublinhado padrão */
-    font-size: 12px;
-    color: var(--texto);
-    padding-bottom: 6px;
-}
- 
-/* Quando passa o mouse em cima, a cor muda */
-.header nav a:hover {
-    color: var(--verde-escuro);
-}
- 
-/* O atributo aria-current="page" marca a página onde estamos.
-   Deixamos esse link em negrito e com uma linha embaixo. */
-
-.header nav a[aria-current="page"] {
-    font-weight: bold;
-    color: var(--verde-escuro);
-    border-bottom: 2px solid var(--verde);
-}
-
 footer {
-    background-color: var(--verde-escuro);
+    background-color: var(--cor-base);
     width: 100%;
     padding: 125px;
-    color: var(--fundo);
+    color: var(--cor-principal);
     font-size: var(--tamanho-fonte-destque);
     margin-top: 60px;
 }
-
+ 
 footer ul {
     list-style: none;
     display: inline-block;
     margin-left: 800px;
 }
-
+ 
 footer ul li {
     display: inline-block;
     margin: 20px;
 }
-
+ 
 footer ul li a {
     text-decoration: none;
-    color: var(--verde-claro);
+    color: var(--cor-principal);
     font-weight: 700;
     transition: 0.8s;
 }
-
+ 
 footer ul li a:hover {
-    border-bottom: 1px solid var(--verde-claro);
+    border-bottom: 1px solid var(--cor-principal);
     padding: 5px 20px;
 }
-
-
+ 
+ 
 footer p {
     font-style: italic;
     font-weight: 300;
     opacity: 80%;
     display: inline;
 }
-
-/* Conteúdo mais estreito e centralizado */
-main {
-    max-width: 656px;
+ 
+/* caixa do conteudo, centralizada */
+.horarios-page {
+    width: 700px;
     margin: 0 auto;
-    padding: 60px 20px 0 20px;
+    padding-top: 60px;
 }
  
-/* Cabeçalho da página */
-.topo h4 {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--verde);
+.horarios-page .topo h4 {
+    letter-spacing: 3px;
+    color: var(--topic-text-color);
+    font-weight: 700;
+    margin-bottom: 15px;
 }
  
-.topo h1 {
-    font-size: 40px;
-    font-weight: normal;
-    color: var(--verde-escuro);
+.horarios-page .topo h1 {
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--cor-base);
+    letter-spacing: 1px;
+    margin-bottom: 3px;
 }
  
-.topo p {
-    font-size: 14px;
-    margin-top: 10px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--borda);
+.horarios-page .topo p {
+    font-weight: 400;
+    color: var(--navbar-text-color);
+    letter-spacing: 1px;
     margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cor-index-page);
 }
  
- 
-/* width faz a tabela ocupar toda a largura disponível.
-   border-collapse junta as bordas das células sem espaço duplo */
-table {
+/* tabela ocupa a largura toda, o collapse junta as bordas das celulas */
+.horarios-page table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    border: 1px solid var(--borda);
+    border: 1px solid var(--cor-index-page);
 }
  
-/* Linha do cabeçalho da tabela Dia | Horário */
-thead tr {
-    background-color: var(--verde-escuro);
-    color: white;
+/* linha de cima (Dia e Horario) */
+.horarios-page thead tr {
+    background-color: var(--cor-base);
+    color: var(--cor-principal);
 }
  
-/* th = célula de título, td = célula normal.
-   Os dois ficam alinhados à esquerda e com espaço interno. */
-th, td {
+.horarios-page th,
+.horarios-page td {
     text-align: left;
-    padding: 16px 20px;
-    font-size: 13px;
+    padding: 18px 20px;
+    letter-spacing: 1px;
 }
  
-/* Só as linhas do corpo ganham uma linha separando */
-tbody tr {
-    border-bottom: 1px solid var(--borda);
+/* linha entre cada dia */
+.horarios-page tbody tr {
+    border-bottom: 1px solid var(--cor-index-page);
 }
  
-/* A segunda coluna (os horários) fica em negrito e verde escuro */
-td:last-child {
-    font-weight: bold;
-    color: var(--verde-escuro);
-}
- 
-/* A primeira coluna (o dia) usa a cor normal do texto */
-td:first-child {
-    color: #222;
+/* primeira coluna (dia) */
+.horarios-page td:first-child {
     width: 50%;
-}
-
-/* Fundo verde claro e uma barra verde na esquerda (border-left) */
-.observacao {
-    background-color: var(--verde-claro);
-    border-left: 3px solid var(--verde);
-    padding: 15px 16px;
-    margin-top: 15px;
-    font-size: 13px;
+    color: var(--cor-current-page);
 }
  
-/* strong é o negrito dentro da observação */
-.observacao strong {
-    color: var(--verde-escuro);
+/* ultima coluna (horario) */
+.horarios-page td:last-child {
+    font-weight: 700;
+    color: var(--cor-base);
+}
+ 
+/* aviso embaixo da tabela, com uma barra do lado esquerdo */
+.horarios-page .observacao {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background-color: var(--cor-index-page);
+    border-left: 3px solid var(--topic-text-color);
+    color: var(--navbar-text-color);
+    letter-spacing: 1px;
+}
+ 
+.horarios-page .observacao strong {
+    color: var(--cor-base);
 }
