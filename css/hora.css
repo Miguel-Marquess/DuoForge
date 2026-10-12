@@ -1,15 +1,195 @@
 :root {
-    --cor-principal: #FFFFFF;
-    --cor-base: #174B52;
-    --cor-index-page: #DCEEED;
-    --fonte: "Inria Sans", sans-serif;
-    --cor-current-page: #414C4C;
-    --navbar-text-color: #627777;
-    --tamanho-fonte-destque: 20px;
-    --topic-text-color: #236C73;
+    --verde-escuro: #174d54;   /* rodapé e títulos */
+    --verde: #236b73;          /* botões e detalhes */
+    --verde-claro: #ddeceb;    /* caixinhas de destaque */
+    --fundo: #f7f9f8;          /* fundo da página */
+    --texto: #5a6b6e;          /* texto cinza */
+    --borda: #cfd9d8;          /* linhas e bordas */
 }
 
-header {
-    padding: 50px;
-    border-bottom: 1px solid var(--cor-base);
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 15%;   /* 12px em cima/baixo e 15% nas laterais */
+}
+
+.header img {
+    width: 38px;
+    height: 38px;
+}
+ 
+.titulo {
+    margin-left: 10px;
+}
+ 
+.titulo h2 {
+    font-size: 16px;
+    color: var(--verde-escuro);
+}
+ 
+.titulo p {
+    font-size: 10px;
+}
+ 
+/* margin-left: auto empurra o menu todo para a DIREITA */
+.header nav {
+    margin-left: auto;
+}
+ 
+/* Lista do menu: tira as bolinhas list-style e deixa os itens
+   um do lado do outro flex. O gap é o espaço entre eles. */
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+ 
+/* Estilo dos links do menu */
+.header nav a {
+    text-decoration: none;   /* tira o sublinhado padrão */
+    font-size: 12px;
+    color: var(--texto);
+    padding-bottom: 6px;
+}
+ 
+/* Quando passa o mouse em cima, a cor muda */
+.header nav a:hover {
+    color: var(--verde-escuro);
+}
+ 
+/* O atributo aria-current="page" marca a página onde estamos.
+   Deixamos esse link em negrito e com uma linha embaixo. */
+.header nav a[aria-current="page"] {
+    font-weight: bold;
+    color: var(--verde-escuro);
+    border-bottom: 2px solid var(--verde);
+}
+
+/* Fundo verde escuro, texto branco. Também usa flex para deixar
+   o texto à esquerda e os links à direita. */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* um em cada ponta */
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 36px 15%;
+    margin-top: 60px;   /* espaço entre o conteúdo e o rodapé */
+}
+ 
+footer h3 {
+    font-size: 14px;
+}
+ 
+footer p {
+    font-size: 11px;
+}
+ 
+/* Links do rodapé lado a lado */
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+ 
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+ 
+footer a:hover {
+    text-decoration: underline;   /* sublinha ao passar o mouse */
+}
+
+/* Conteúdo mais estreito e centralizado */
+main {
+    max-width: 656px;
+    margin: 0 auto;
+    padding: 60px 20px 0 20px;
+}
+ 
+/* Cabeçalho da página */
+.topo h4 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--verde);
+}
+ 
+.topo h1 {
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--verde-escuro);
+}
+ 
+.topo p {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--borda);
+    margin-bottom: 40px;
+}
+ 
+ 
+/* width faz a tabela ocupar toda a largura disponível.
+   border-collapse junta as bordas das células sem espaço duplo */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid var(--borda);
+}
+ 
+/* Linha do cabeçalho da tabela Dia | Horário */
+thead tr {
+    background-color: var(--verde-escuro);
+    color: white;
+}
+ 
+/* th = célula de título, td = célula normal.
+   Os dois ficam alinhados à esquerda e com espaço interno. */
+th, td {
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 13px;
+}
+ 
+/* Só as linhas do corpo ganham uma linha separando */
+tbody tr {
+    border-bottom: 1px solid var(--borda);
+}
+ 
+/* A segunda coluna (os horários) fica em negrito e verde escuro */
+td:last-child {
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+ 
+/* A primeira coluna (o dia) usa a cor normal do texto */
+td:first-child {
+    color: #222;
+    width: 50%;
+}
+
+/* Fundo verde claro e uma barra verde na esquerda (border-left) */
+.observacao {
+    background-color: var(--verde-claro);
+    border-left: 3px solid var(--verde);
+    padding: 15px 16px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+ 
+/* strong é o negrito dentro da observação */
+.observacao strong {
+    color: var(--verde-escuro);
 }

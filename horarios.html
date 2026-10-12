@@ -1,34 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/hora.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nova+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <title>DuoForge</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>DuoForge - Horários</title>
 </head>
-
 <body>
+
     <header class="header">
-        <img src="media/logo.jpg" alt="Logo">
-        
+        <img src="media/logo.jpg" alt="Logo da DuoForge">
         <div class="titulo">
             <h2>DuoForge</h2>
-                <nav>
+            <p>Evolução em dupla</p>
+        </div>
+
+        <nav>
             <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="horarios.html">Horários</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="horarios.html" aria-current="page">Horários</a></li>
+                <li><a href="contatos.html">Contato</a></li>
             </ul>
         </nav>
+    </header>
+
+    <main>
+        <section class="topo">
+            <h4>DISPONIBILIDADE</h4>
+            <h1>Horários</h1>
+            <p>Confira nossos horários regulares para reuniões e desenvolvimento.</p>
+        </section>
+
+        <!-- <table> cria a tabela.
+             <thead> = cabeçalho | <tbody> = corpo
+             <tr> = linha | <th> = célula de título | <td> = célula normal -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>18:00 – 22:00</td>
+                </tr>
+                <tr>
+                    <td>Terça</td>
+                    <td>18:00 – 22:00</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>18:00 – 22:00</td>
+                </tr>
+                <tr>
+                    <td>Quinta</td>
+                    <td>18:00 – 22:00</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>18:00 – 20:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="observacao"><strong>Observação:</strong> Atendimentos podem ser agendados previamente.</p>
+    </main>
+
+    <footer>
+        <div>
+            <h3>&copy; 2026 DuoForge</h3>
+            <p>Miguel e Pedro - Distribuição Ciro Games</p>
+        </div>
+        <ul>
+            <!-- target="_blank" abre o link em uma nova aba -->
+            <li><a href="https://github.com/Miguel-Marquess/DuoForge" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/miguel-marrques/" target="_blank">Linkedin - Miguel</a></li>
+            <li><a href="https://www.linkedin.com/in/pedro-victor-bezerra-de-sousa-53a8253a7/" target="_blank">Linkedin - Pedro</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
