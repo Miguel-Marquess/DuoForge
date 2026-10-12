@@ -1,0 +1,15 @@
+:root {
+    --cor-principal: #FFFFFF;
+    --cor-base: #174B52;
+    --cor-index-page: #DCEEED;
+    --fonte: "Inria Sans", sans-serif;
+    --cor-current-page: #414C4C;
+    --navbar-text-color: #627777;
+    --tamanho-fonte-destque: 20px;
+    --topic-text-color: #236C73;
+}
+
+header {
+    padding: 50px;
+    border-bottom: 1px solid var(--cor-base);
+}
