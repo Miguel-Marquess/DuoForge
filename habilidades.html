@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <!-- Permite acentos e "ç" aparecerem corretamente -->
     <meta charset="UTF-8">
+    <!-- Faz o site se ajustar na tela do celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Liga esta página ao arquivo de estilos (CSS) -->
+    <link rel="stylesheet" href="css/hab.css">
+    <!-- Fontes do Google (as mesmas das outras páginas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Título que aparece na aba do navegador -->
+    <title>DuoForge - Habilidades</title>
 </head>
 <body>
+    <header class="header">
+        <img src="media/logo.jpg" alt="Logo da DuoForge">
+        <div class="titulo">
+            <h2>DuoForge</h2>
+            <p>Evolução em dupla</p>
+        </div>
+        <!--menu de navegação: cada <a> leva para outra página -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="habilidades.html" aria-current="page">Habilidades</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="topo">
+            <h4>CONHECIMENTOS</h4>
+            <h1>Habilidades</h1>
+            <p>Tecnologias que usamos para construir projetos completos, do planejamento à entrega.</p>
+        </section>
+
+        <!-- Cada <section class="categoria"> é uma linha da lista:
+             número | título | tecnologias -->
+        <section class="categoria">
+
+            <span class="numero">01</span>
+            <div class="categoria-titulo">
+                <h2>Desenvolvimento</h2>
+                <p>Interfaces e linguagens</p>
+            </div>
+            <!-- <ul> = lista; cada <li> = um item (uma tecnologia) -->
+            <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+
+        </section>
+
+        <section class="categoria">
+
+            <span class="numero">02</span>
+            <div class="categoria-titulo">
+                <h2>Backend</h2>
+                <p>Estrutura e dados</p>
+            </div>
+            <ul class="tags">
+                <li>APIs REST</li>
+                <li>FastAPI</li>
+                <li>Django</li>
+                <li>Banco de Dados</li>
+            </ul>
+
+        </section>
+
+        <section class="categoria">
+
+            <span class="numero">03</span>
+            <div class="categoria-titulo">
+                <h2>Ferramentas</h2>
+                <p>Organização e entrega</p>
+            </div>
+            <ul class="tags">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Docker</li>
+            </ul>
+
+        </section>
+    </main>
     
+    <footer>
+        <div>
+            <h3>&copy; 2026 DuoForge</h3>
+            <p>Miguel e Pedro - Distribuição Ciro Games</p>
+        </div>
+        <ul>
+            <!-- target="_blank" abre o link em uma nova aba -->
+            <li><a href="https://github.com/Miguel-Marquess/DuoForge" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/miguel-marrques/" target="_blank">Linkedin - Miguel</a></li>
+            <li><a href="https://www.linkedin.com/in/pedro-victor-bezerra-de-sousa-53a8253a7/" target="_blank">Linkedin - Pedro</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
