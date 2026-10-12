@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <!-- Permite acentos e "ç" aparecerem corretamente -->
     <meta charset="UTF-8">
-    <!-- Faz o site se ajustar na tela do celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Liga esta página ao arquivo de estilos (CSS) -->
     <link rel="stylesheet" href="css/hab.css">
-    <!-- Fontes do Google (as mesmas das outras páginas) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Ícone que aparece na aba do navegador -->
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Título que aparece na aba do navegador -->
-    <title>DuoForge - Habilidades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nova+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <title>DuoForge</title>
 </head>
 <body>
     <header class="header">
-        <img src="media/logo.jpg" alt="Logo da DuoForge">
+        <!-- Logo do site -->
+        <img src="media/logo.jpg" alt="Logo">
+        <!-- Nome e slogan -->
         <div class="titulo">
             <h2>DuoForge</h2>
             <p>Evolução em dupla</p>
         </div>
-        <!--menu de navegação: cada <a> leva para outra página -->
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="habilidades.html" aria-current="page">Habilidades</a></li>
                 <li><a href="horarios.html">Horários</a></li>
-                <li><a href="contatos.html">Contato</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
 
+
+    <main class="habilidades-page">
+        <!-- Título da página -->
         <section class="topo">
             <h4>CONHECIMENTOS</h4>
             <h1>Habilidades</h1>
@@ -45,15 +44,15 @@
         </section>
 
         <!-- Cada <section class="categoria"> é uma linha da lista:
-             número | título | tecnologias -->
+             número | título | tecnologias.
+             O <span> marca só o número, para o CSS poder estilizar ele -->
         <section class="categoria">
-
             <span class="numero">01</span>
             <div class="categoria-titulo">
                 <h2>Desenvolvimento</h2>
                 <p>Interfaces e linguagens</p>
             </div>
-            <!-- <ul> = lista; cada <li> = um item (uma tecnologia) -->
+
             <ul class="tags">
                 <li>HTML</li>
                 <li>CSS</li>
@@ -61,11 +60,9 @@
                 <li>Python</li>
                 <li>Java</li>
             </ul>
-
         </section>
 
         <section class="categoria">
-
             <span class="numero">02</span>
             <div class="categoria-titulo">
                 <h2>Backend</h2>
@@ -77,11 +74,9 @@
                 <li>Django</li>
                 <li>Banco de Dados</li>
             </ul>
-
         </section>
 
         <section class="categoria">
-
             <span class="numero">03</span>
             <div class="categoria-titulo">
                 <h2>Ferramentas</h2>
@@ -92,17 +87,15 @@
                 <li>GitHub</li>
                 <li>Docker</li>
             </ul>
-
         </section>
     </main>
-    
+
+
     <footer>
-        <div>
-            <h3>&copy; 2026 DuoForge</h3>
-            <p>Miguel e Pedro - Distribuição Ciro Games</p>
-        </div>
+        <h3>&copy; 2026 DuoForge</h3>
+        <p>Miguel e Pedro - Distribuição Ciro Games</p>
         <ul>
-            <!-- target="_blank" abre o link em uma nova aba -->
+
             <li><a href="https://github.com/Miguel-Marquess/DuoForge" target="_blank">Github</a></li>
             <li><a href="https://www.linkedin.com/in/miguel-marrques/" target="_blank">Linkedin - Miguel</a></li>
             <li><a href="https://www.linkedin.com/in/pedro-victor-bezerra-de-sousa-53a8253a7/" target="_blank">Linkedin - Pedro</a></li>
